@@ -1,3 +1,4 @@
+import 'package:app_flutter/screens/contact_screen.dart';
 import 'package:flutter/material.dart';
 
 class DestinationScreen extends StatelessWidget {
@@ -73,7 +74,13 @@ class DestinationScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     ElevatedButton.icon(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const ContactScreen()),
+                        );
+                      },
                       icon: const Icon(
                         Icons.event_available,
                         color: Colors.white,
